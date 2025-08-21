@@ -2,12 +2,14 @@ package com.wellsfargo.counselor.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 import java.util.Date;
 
 public class Security {
     @Id
     private long securityId;
+    @ManyToOne
     private long portfolioId;
 
     @Column(nullable = false)

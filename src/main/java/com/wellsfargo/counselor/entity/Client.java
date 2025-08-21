@@ -3,12 +3,14 @@ package com.wellsfargo.counselor.entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 public class Client {
 
     @Id
     @GeneratedValue()
     private long clientId;
+    @ManyToOne
     private long advisorId;
 
     @Column(nullable = false)
